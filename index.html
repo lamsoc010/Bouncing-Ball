@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Bouncing Ball</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        button {
+            min-width: 100px;
+            padding: 5px;
+        }
+        .content {
+            margin-left: 30px;
+        }
+        #pause {
+            margin: 10px 0;
+        }
+        #time, #result {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Game Boucing Ball</h1>
+    <div class="container">
+        <div>
+            <button id="start" onclick="start()">Start</button> <br>
+            <button id="pause" onclick="pause()">Tạm dừng</button> 
+            <button id="next" onclick="next()">Tiếp tục</button> <br>
+        
+            <canvas id="myCanvas" width="600px" height="400px" style="border: 1px solid black;"></canvas>
+        </div>
+        <div class="content">
+            <p id="result">Điểm: 0</p>
+            <p id="time">0:0</p>
+            <h1>Danh sách thời gian đã chơi</h1>
+            <ul id="listTimes">
+                
+            </ul>
+        </div>
+        
+    </div>
+
+    <script src="Ball.js"></script>
+    <script src="Rectangle.js"></script>
+    <script src="Brick.js"></script>
+    <script src="Time.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
