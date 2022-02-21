@@ -5,51 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Bouncing Ball</title>
-    <style>
-        .container {
-            display: flex;
-        }
-
-        button {
-            min-width: 100px;
-            padding: 5px;
-        }
-        .content {
-            margin-left: 30px;
-        }
-        #pause {
-            margin: 10px 0;
-        }
-        #time, #result {
-            font-size: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
 </head>
 <body>
-    <h1>Game Boucing Ball</h1>
+    <h1 id="heading">Game Boucing Ball</h1>
     <div class="container">
-        <div>
-            <button id="start" onclick="start()">Start</button> <br>
-            <button id="pause" onclick="pause()">Tạm dừng</button> 
-            <button id="next" onclick="next()">Tiếp tục</button> <br>
-        
-            <canvas id="myCanvas" width="600px" height="400px" style="border: 1px solid black;"></canvas>
-        </div>
-        <div class="content">
-            <p id="result">Điểm: 0</p>
-            <p id="time">0:0</p>
-            <h1>Danh sách thời gian đã chơi</h1>
-            <ul id="listTimes">
-                
+        <div class="tutorial">
+            <h1>Hướng dẫn chơi</h1>
+            <p><b> Luật chơi: </b>Di chuyển thanh ngang đở bóng sao cho bóng không bị chạm đáy của khung trò chơi. 
+                Bạn sẽ chiến thắng nếu như phá hết số gạch, trò chơi sẽ được tính thời gian. </p>
+            <p><b>Độ phức tạp của game: </b></p>
+            <ul>
+                <li>Tốc độ và góc độ của quả bóng sẽ được random để tạo tính bất ngờ</li>
+                <li>Sau mỗi 35s nếu như chưa thắng thì sẽ sinh ra thêm 1 hàng gạch, lúc này tốc độ trò chơi sẽ được tăng lên</li>
+                <li>Gợi ý: Các mốc thời gian tốc độ sẽ tăng: <br> <span id="timeUp">0:35, 1:10, 1:45, 2:20, 2:55,...</span> </li>
+            </ul>
+            <p><b>Hướng dẫn thao tác: </b></p>
+            <ul>
+                <li>Nhấn nút <b>START (Phím tắt: ENTER)</b> để bắt đầu và thời gian sẽ được tính</li>
+                <li>Nhấn nút <b>TẠM DỪNG (Phím tắt: SPACE) </b>để tạm dừng trò chơi và thời gian sẽ dừng lại</li>
+                <li>Nhấn nút <b>TIẾP TỤC (Phím tắt: SPACE) </b> để tiếp tục trò chơi và thời gian sẽ được tiếp tục chạy</li>
             </ul>
         </div>
-        
+        <div class="main">
+            <div class="gaming">
+                <div class="event">
+                    <button id="start" onclick="start()">Start</button> <br>
+                    <button id="pause" onclick="pause()">Tạm dừng</button> 
+                    <button id="next" onclick="next()">Tiếp tục</button> <br>
+                </div>
+                <div class="content">
+                    <p id="result">Điểm: 0</p>
+                    <p id="time">0:0</p>
+                </div>
+            </div>
+            <canvas id="myCanvas" width="600px" height="600px" style="border: 1px solid black;"></canvas>
+        </div>
+        <div>
+            <h1>Danh sách thành tích</h1>
+            <ul id="listTimes">
+            </ul>
+        </div>
     </div>
 
-    <script src="Ball.js"></script>
-    <script src="Rectangle.js"></script>
-    <script src="Brick.js"></script>
-    <script src="Time.js"></script>
-    <script src="index.js"></script>
+    <audio src="./mp3/nhacnen.mp3" autoplay></audio>
+
+    <script src="./js/Ball.js"></script>
+    <script src="./js/Rectangle.js"></script>
+    <script src="./js/Brick.js"></script>
+    <script src="./js/Time.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>

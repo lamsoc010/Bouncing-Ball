@@ -17,6 +17,7 @@ B2: Phân tích:
         + Quả bóng - Ball 
             .Thuộc tính: x, y, radius, color
             .Phương thức: draw()
+            
 
 ** Làm thêm chạm dưới Canvas thì nó sẽ thua và dừng trò chơi  -----> CHƯA LÀM
 (Ý tưởng, làm 1 cái hàm chạm dưới riêng rồi qua index.js để gọi riêng hàm đó để check rồi clearInterval thôi).
@@ -27,3 +28,7 @@ https://www.stdio.vn/javascript/hien-thuc-timer-voi-javascript-6g3Um1
 ** Chuyển đổi bô đếm giờ thành Class với tham số: second, minute, và mảng để lưu lại từng thời gian.
 
 ** Đã xong chuyển đổi Time thành đối tượng, xử lý lại cho gọn với là thêm cái tính người chơi xuất sắc nhất ==> Xong game over
+
+** Phát triểN thêm nhập tên người chơi vào rồi nếU thắng thì sẽ hiểN thị tên người đÓ cùng mốc thời gian
+
+** Sau 1 thời gian thì thêm 1 tầng gạch nữa hạ xuống.
